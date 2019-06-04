@@ -68,33 +68,6 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"/CHANGELOG.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/CHANGELOG.html",
-		"oF": 0
-		},
-	"/CHANGELOG.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/CHANGELOG.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
 	"/comments.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -531,7 +504,7 @@
 		},
 	"/library/images/login-logo.png": {
 		"ft": 32768,
-		"iS": 7944,
+		"iS": 1611,
 		"oA": 0,
 		"oAP": "/library/images/login-logo.png",
 		"oF": 0,
@@ -542,7 +515,7 @@
 		},
 	"/library/images/login-logo@2x.png": {
 		"ft": 32768,
-		"iS": 17587,
+		"iS": 3002,
 		"oA": 0,
 		"oAP": "/library/images/login-logo@2x.png",
 		"oF": 0,
@@ -1020,17 +993,28 @@
 		"oAP": "/page.php",
 		"oF": 0
 		},
-	"/readme.txt": {
+	"/README.md": {
 		"cB": 0,
-		"ft": 8192,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/readme.txt",
-		"oF": 0
+		"oA": 1,
+		"oAP": "/README.html",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/screenshot.png": {
 		"ft": 32768,
-		"iS": 17279,
+		"iS": 12381,
 		"oA": 0,
 		"oAP": "/screenshot.png",
 		"oF": 0,
