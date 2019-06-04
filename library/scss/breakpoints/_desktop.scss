@@ -1,0 +1,117 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+This stylesheet will be used for tablets and larger devices
+like desktops. CSS Grid starts working its magic here so you
+can start to have fun with your layout(s).
+
+******************************************************************/
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+body {
+    // Grid
+    // display: grid;
+    // grid-template-areas: 
+    //     "header header header"
+    //     "aside main main"
+    //     ". footer footer";
+        
+    // grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px auto 0 auto;
+    width: 1000px;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav { // the ul element
+    max-width: 970px;
+}
+
+
+/*********************
+GLOBAL STYLES
+*********************/
+#main {
+    width: 1000px;
+
+    .page, .post {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 'left right';
+        
+        .article-header { 
+            grid-area: left; 
+            padding-right: 50px;
+            height: 100%;
+            justify-content: flex-start;
+            padding-top: 30vh;
+    
+            .sticky50 { 
+                position: sticky;
+                top: 50px;
+            }
+        }
+    }
+    
+    .entry-content { 
+        grid: right; 
+        //margin-top: 100vh;
+        padding: 0 50px;
+        .featured-image {
+            height: calc( 100vh - 52px );
+            padding-top: 17vh;
+
+            /* Hide the toggle checkbox */
+            #expand-toggle {
+                display: none;
+                cursor: zoom-in;
+            }
+            #expand-image {
+                cursor: zoom-in;
+                display: inline-block;
+            }
+            #expand-toggle:checked ~ #expand-image img {
+                transform: scale(2) translateX(-75px);
+                transition-duration:.5s;
+                cursor: zoom-out;
+                display: inline-block;
+            }
+            
+
+        }
+        .wp-block-image {
+            margin: 30px 0;
+        }
+    }
+    .article-footer {
+        max-width: 1000px;
+        height: 300px;
+
+    }  
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+    margin-top: 200px;
+}
+
+.inner-sidebar {
+    position: sticky;
+    top: 0;
+}

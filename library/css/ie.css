@@ -33,6 +33,10 @@ No one likes a mess.
 
 ******************************************************************/
 /*********************
+ANIMATION DURATION
+*
+*/
+/*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
@@ -118,12 +122,13 @@ p {
   word-wrap: break-word;
   word-break: break-word;
   -webkit-hyphens: none;
-  -ms-hyphens: none;
-      hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
   -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
@@ -154,6 +159,7 @@ http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
 .foo-parent {
@@ -279,6 +285,14 @@ can start to have fun with your layout(s).
 
 ******************************************************************/
 /*********************
+LAYOUT & GRID STYLES
+*********************/
+body {
+  display: grid;
+  grid-template-areas: "header header header" "aside main main" ". footer footer";
+  grid-template-columns: 1fr 1fr 1fr; }
+
+/*********************
 GLOBAL STYLES
 *********************/
 .entry-content .alignfull {
@@ -301,7 +315,7 @@ GLOBAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  padding: 1em 1.5em; }
+  padding: 2em 4.5em; }
 
 /*********************
 HEADER STYLES
@@ -309,57 +323,6 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-.header-nav {
-  display: flex;
-  align-items: center; }
-
-.nav {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  list-style-type: none;
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav li {
-    float: left;
-    list-style: none;
-    /*
-        plan your menus and drop-downs wisely.
-        */
-    /* showing sub-menus */ }
-    .nav li a {
-      display: block;
-      border-bottom: 0;
-      padding: 0 0.5em;
-      text-decoration: none;
-      /*
-            you can use hover styles here even though this size
-            has the possibility of being a mobile device.
-            */ }
-      .nav li a:hover, .nav li a:focus {
-        text-decoration: underline; }
-    .nav li ul.sub-menu,
-    .nav li ul.children {
-      position: absolute;
-      z-index: 8999;
-      visibility: hidden;
-      /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
-        /*
-                if you need to go deeper, go nuts
-                just remember deeper menus suck
-                for usability. k, bai.
-                */ }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
-          border-bottom: 0; }
-    .nav li:hover > ul {
-      top: auto;
-      visibility: visible; }
-
-/* end .nav */
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -376,6 +339,13 @@ so we've copied them here.
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar {
+  margin-top: 200px; }
+
+.inner-sidebar {
+  position: sticky;
+  top: 0; }
+
 .widget ul li {
   /* deep nesting */ }
 
@@ -452,4 +422,3 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
-/*# sourceMappingURL=ie.css.map */

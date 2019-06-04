@@ -1,0 +1,477 @@
+/******************************************************************
+Stylesheet: Base Stylesheet
+GLOBAL STYLES
+*********************/
+
+html {
+    font-size: .78em; // 1em = 16px; Adjust if you want a different baseline.
+    background-color: #EDEDED;
+}
+
+body {
+    color: $text-black;
+    font-size: 100%;
+    font-family: $sans;
+    line-height: 1.5;
+    margin: 10px auto 0 auto;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 15px 15px 0 0;
+    // Adjust for your type
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-shadow: 0px 0px 7px 0px #d0d0d0;
+    -moz-box-shadow: 0px 0px 7px 0px #d0d0d0;
+    box-shadow: 0px 0px 7px 0px #d0d0d0;
+    position: relative;
+    z-index: -3;
+    width: 340px;
+}
+
+img {
+    //display: block; // removes added default margin
+    // responsive images by default
+    max-width: 100%;
+    height: auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+    // border-bottom: 2px solid $john-red;
+    transition: background 400ms ease-in-out;
+    font-weight: 700;
+    color: $text-black;
+    text-decoration: none;
+    /* on hover */
+    &:hover, &:focus {
+        text-decoration: none;
+        background: $john-red;
+        transition:none;
+    }
+
+    /* on click */
+    &:active {}
+
+    /* mobile tap color */
+    &:link {
+        /*
+        this highlights links on iPhones/iPads.
+        so it basically works like the :hover selector
+        for mobile devices.
+        */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/******************************************************************
+HEADING STYLES
+******************************************************************/
+
+/* Heading defaults */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin: 1.333em 0 0.5em;
+    color: lighten($sb-black, 12%);
+    font-weight: 700;
+    line-height: 1.2;
+    text-rendering: optimizelegibility;
+
+    /* 
+    Removing text decoration from all headline links.
+    If you want it, then delete this. Do it your way.
+    */
+    a {
+        text-decoration: none;
+    }
+}
+
+h1, .h1 {
+    margin-top: 0; 
+    margin-bottom: 0.319em;
+    font-size: 2.369em;
+}
+
+h2, .h2 {
+    margin-top: 0.88em;
+    font-size: 2em;
+}
+
+h3, .h3 {
+    font-size: 1.777em;
+}
+
+h4, .h4 {
+    font-size: 1.333em;
+}
+
+h5, .h5 {
+    font-size: 1em;
+}
+
+h6, .h6 {
+    text-transform: uppercase;
+    letter-spacing: 4.333px;
+}
+
+/*********************
+LIST STYLES
+*********************/
+
+ul, ol {
+    // removes default list padding in Safari + Chrome
+    -webkit-padding-start: 20px;
+}
+
+.list-square {
+    // add this class to your <ul> to get square bullets
+    margin-bottom: 1.5em;
+    list-style-position: outside;
+    list-style-type: square;
+}
+
+.nostyle {
+    // add this class to <ul> elements that aren't lists per se (removes bullets)
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.related-posts-list {
+    display: flex;
+}
+
+.page-numbers {
+    margin: 1em 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    li {
+        margin-right: 1em;
+    }
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+#site-title {
+    margin: 18px 20px 0 0;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: inherit;
+    a {
+        color: lighten($sb-black, 12%);
+        border-bottom: none;
+    }
+}
+
+#bloginfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    transition: all $animate;
+    
+    &.preload {
+        transform: translateY(-20px);
+        opacity: -1;
+    }
+
+    a {
+        background: none;
+        
+        &:hover {
+            text-decoration: underline;
+            img {
+                transform: scale(1.2);
+            }
+            
+        }
+    }
+}
+
+#logo {
+    margin-right: 8px;
+    img {
+        // replace /library/images/logo.svg and adjust for your logo size
+        width: 45px;
+        height: 45px;
+        margin: 3px 0 0 5px;
+    }
+}
+
+#welcome-msg {
+    height: calc(100vh - 132px);
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav-container {
+    // class on the main navigation nav element
+    background-color: $john-red;
+    position: fixed;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    transition: all 1s;
+    transform: translateY(-40px); 
+    z-index: 9;
+}
+
+.nav { // the ul element
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 315px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+    height: 50px;
+    font-size: 10px;
+
+    ul {
+        display: flex;
+        text-align: right;
+    }
+
+    li {
+        display: inline;
+        list-style: none;
+
+        &::after {
+            content: '/';
+            color: white;
+        }
+        &:last-child::after {
+            content: '';
+        }
+
+        a {
+            border-bottom: 0;
+            padding: 0 0.5em;
+            text-decoration: none;
+            color: #ffffff;
+
+            &:hover, &:focus {
+                text-decoration: underline;
+                //border-bottom: 1px solid white;
+            }
+        }
+    }
+}
+
+/********************
+WORDPRESS BODY CLASSES
+********************/
+
+.error404 {
+    .search-outer {
+        padding: 1.5em 0;
+    }
+    .search-input {
+        display: flex;
+        width: 100%;
+    }
+    input[type="search"] {
+        margin: 0 1em 0 0;
+        height: 40px;
+        min-width: 250px;
+    }
+    .search-submit {
+        width: 100px;
+    }
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#main {
+    transition: all $animate;
+    width: 340px;
+
+    &.preload {
+        transform: translateY(20px);
+        opacity: 0;
+        transition-duration: 1s;
+    }
+
+    .page, .post  {
+        margin: 0 50px;
+        transition: all $animate;
+
+        .article-header {
+            height: calc(100vh - 100px);
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            justify-content: center;
+
+            a {
+                display: inline-block;    
+                img {
+                    width: 14px;
+                }
+            }
+
+            .social {
+                margin: 10px 0;
+                a { 
+                    margin-right: 20px; 
+                    &:hover {
+                        transform: scale(1.2);
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .post {
+        margin-bottom: 92px;
+
+        .article-header {
+            // margin-top: 50px;
+            .single-title { 
+                position: sticky;
+                top:30px;
+            }
+            .post-cat, .post-tag {
+                margin-bottom: 10px; 
+                position: sticky;
+                top: 10px;
+                
+                span {
+                    padding: 1px 3px;
+                    color: white;
+                    font-size: .7em;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+            .post-cat {
+                display: inline-block;
+                span { background-color: $text-black; } 
+            }
+            .post-tag {
+                display: inline-block;
+                margin-right: 4px;
+                span { background-color: $john-red; }
+            }
+        }
+        #expand-toggle {
+            display: none;
+        }
+    }
+    .article-footer {
+        height: 30vh;
+        position: fixed;
+        bottom: 50px;
+        margin-left: -50px;
+        //width: calc(100vw - 20px);
+        width: 100%;
+        max-width: 340px;
+        overflow: hidden;
+        z-index: -1;
+        transition-duration: 1s;
+       
+        &.preload { bottom: 0; }
+        .background-image {
+            background-size: cover;
+            height: 100%;
+            overflow: hidden;
+
+        }
+        img { display: none; }
+    }   
+}
+
+.contact {
+    margin-bottom: 50vh;
+
+    label { font-size: .7em; }
+    input { font-size: 2em; }
+    textarea { font-size: 1.5em; }
+    input, button, textarea {
+        background-color: rgba( $john-red, .1 );
+        border: none;
+        padding: 10px;
+        width: 100%;
+        &:focus, &:hover {
+            outline: 1px solid $john-red;
+        }
+    }
+    
+    [type="submit"] {
+        border-radius: 10px;
+        width: 100px;
+        font-size: 1em;
+    }
+    
+}
+
+
+/******************************************************************
+SCREEN READER STYLES
+******************************************************************/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+}
+
+.screen-reader-text:focus {
+    top: 5px;
+    left: 5px;
+    z-index: 100000;
+
+    /* Above WP toolbar. */
+    display: block;
+    clip: auto !important;
+    padding: 15px 23px 14px;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    color: #21759b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875rem;
+    font-size: 14px;
+    line-height: normal;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+    position: relative;
+    bottom: 50px;
+}
+
+.footer-links {
+    ul {
+        li {}
+    }
+}
+
+.copyright {
+    text-align: right;
+    color: $text-black;
+    margin-right: 25px;
+}
+.single .copyright {
+    color: $text-black;
+}

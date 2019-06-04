@@ -1,21 +1,25 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Variables
-
-Here is where we declare all our variables like colors, fonts,
-base values, and defaults. We want to make sure this file ONLY
-contains variables that way our files don't get all messy.
-No one likes a mess.
-
 ******************************************************************/
+
+
+// ANIMATION DURATION
+
+$animate: 1s;
+
+.preload {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
 
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+$john-red: #FD8787;
+$text-black: #333333;
 
 $alert-yellow: #ebe16f;
 $alert-red: #fbe3e4;

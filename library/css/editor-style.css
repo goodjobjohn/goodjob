@@ -146,16 +146,7 @@ body#tinymce.wp-editor {
    * Add the correct display in IE 10.
    */
   /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Variables
-
-Here is where we declare all our variables like colors, fonts,
-base values, and defaults. We want to make sure this file ONLY
-contains variables that way our files don't get all messy.
-No one likes a mess.
-
 ******************************************************************/
   /*********************
 COLORS
@@ -400,8 +391,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     /* 1 */
     text-decoration: underline;
     /* 2 */
-    -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted;
+    text-decoration: underline dotted;
     /* 2 */ }
   body#tinymce.wp-editor b,
   body#tinymce.wp-editor strong {
@@ -520,6 +510,8 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     body#tinymce.wp-editor .clearfix:after, body#tinymce.wp-editor .cf:after {
       clear: both; }
   body#tinymce.wp-editor * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
   body#tinymce.wp-editor .image-replacement,
   body#tinymce.wp-editor .ir {
@@ -531,12 +523,13 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     word-wrap: break-word;
     word-break: break-word;
     -webkit-hyphens: none;
-    -ms-hyphens: none;
-        hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
     -webkit-hyphenate-before: 2;
     -webkit-hyphenate-after: 3;
     hyphenate-lines: 3;
     -webkit-font-feature-settings: "liga", "dlig";
+    -moz-font-feature-settings: "liga=1, dlig=1";
     -ms-font-feature-settings: "liga", "dlig";
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig"; }
@@ -545,6 +538,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   body#tinymce.wp-editor .foo-parent {
     position: relative; }
@@ -638,4 +632,3 @@ ul, ol {
 
 .related-posts-list {
   display: flex; }
-/*# sourceMappingURL=editor-style.css.map */

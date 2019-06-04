@@ -81,55 +81,6 @@ function plate_lunch() {
 } /* end plate lunch */
 
 
-/************* THUMBNAIL SIZE OPTIONS *************/
-
-// Thumbnail sizes
-add_image_size( 'plate-image-600', 600, 600, true );
-add_image_size( 'plate-image-300', 300, 300, true );
-add_image_size( 'plate-image-150', 150, 150, true );
-
-/*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 100 sized image,
-we would use the function:
-<?php the_post_thumbnail( 'plate-image-300' ); ?>
-for the 600 x 150 image:
-<?php the_post_thumbnail( 'plate-image-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
-
-add_filter( 'image_size_names_choose', 'plate_custom_image_sizes' );
-
-function plate_custom_image_sizes( $sizes ) {
-
-    return array_merge( $sizes, array(
-
-        'plate-image-600' => __('600px by 600px', 'platetheme'),
-        'plate-image-300' => __('300px by 300px', 'platetheme'),
-        'plate-image-150' => __('150px by 150px', 'platetheme'),
-
-        ) 
-    );
-}
-
-/*
-The function above adds the ability to use the dropdown menu to select
-the new images sizes you have just created from within the media manager
-when you add media to your content blocks. If you add more image sizes,
-duplicate one of the lines in the array and name it according to your
-new image size.
-*/
-
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
@@ -137,151 +88,44 @@ function plate_register_sidebars() {
 
 	register_sidebar( array(
 
-            'id' => 'sidebar1',
-            'name' => __( 'Sidebar 1', 'platetheme' ),
-            'description' => __( 'The first (primary) sidebar.', 'platetheme' ),
+            'id' => 'sidebarhome',
+            'name' => __( 'Sidebar Home', 'platetheme' ),
+            'description' => __( 'The Home sidebar.', 'platetheme' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widgettitle">',
             'after_title' => '</h4>',
-
+            
         )
     );
 
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
+    register_sidebar( array(
 
-	Just change the name to whatever your new
-	sidebar's id is, for example:
+        'id' => 'sidebar1',
+        'name' => __( 'Sidebar 1', 'platetheme' ),
+        'description' => __( 'The first (primary) sidebar.', 'platetheme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
 
-	register_sidebar( array(
-
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'platetheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'platetheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-
-	   )
+        )
     );
+} 
 
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
-
-	*/
-} // don't remove this bracket!
-
-
-/*********************
-COMMENTS
-Blah blah blah.
-*********************/
-
-// Adding a custom gravatar. Customize this to add your own. Or delete it. It's totally up to you.
-add_filter( 'avatar_defaults', 'new_default_avatar' );
-
-function new_default_avatar ( $avatar_defaults ) {
-
-    //Set the URL where the image file for your avatar is located
-    $new_avatar_url = get_stylesheet_directory_uri() . '/library/images/custom-gravatar.png';
-
-    // var_dump($new_avatar_url);
-
-    //Set the text that will appear to the right of your avatar in Settings>>Discussion
-    $avatar_defaults[$new_avatar_url] = 'Custom Avatar';
-
-    return $avatar_defaults;
-}
-
-// Comment Layout
-function plate_comments( $comment, $args, $depth ) {
-
-   $GLOBALS['comment'] = $comment; ?>
-
-    <div id="comment-<?php comment_ID(); ?>" <?php comment_class('comment-wrap'); ?>>
-
-        <article class="article-comment">
-
-            <header class="comment-author vcard">
-
-                <?php
-                /*
-                  this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-                  echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-                */
-                ?>
-
-                <?php // custom gravatar call ?>
-
-                <?php
-                  // create variable
-                  $bgauthemail = get_comment_author_email();
-                ?>
-
-                <img data-gravatar="//www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=256" class="load-gravatar avatar avatar-48 photo" height="64" width="64" src="<?php echo get_theme_file_uri(); ?>/library/images/custom-gravatar.png" />
-
-                <?php // end custom gravatar call ?>
-
-                <div class="comment-meta">
-
-                    <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'platetheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'platetheme' ),'  ','') ) ?>
-
-                    <time datetime="<?php echo comment_time('Y-m-j'); ?>">
-
-                        <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'platetheme' )); ?> </a>
-
-                    </time>
-                
-                </div>
-
-            </header>
-
-            <?php if ( $comment->comment_approved == '0' ) : ?>
-
-                <div class="alert alert-info">
-
-                    <p><?php _e( 'Your comment is awaiting moderation.', 'platetheme' ) ?></p>
-
-                </div>
-
-            <?php endif; ?>
-
-            <section class="comment-content">
-
-                <?php comment_text() ?>
-
-            </section>
-
-            <div class="comment-reply">
-
-                <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-                
-            </div>
-            
-        </article>
-
-    <?php // </li> is added by WordPress automatically ?>
-
-<?php } // don't remove this bracket!
 
 
 /*
 Use this to add Google or other web fonts.
 */
 
-// add_action( 'wp_enqueue_scripts', 'plate_fonts' );
+add_action( 'wp_enqueue_scripts', 'plate_fonts' );
 
-// function plate_fonts() {
+function plate_fonts() {
 
-//     wp_enqueue_style( 'plate-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,' );
+    wp_enqueue_style( 'plate-fonts', 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i' );
 
-// }
+}
 
 
 /****************************************
@@ -417,7 +261,7 @@ function plate_scripts_and_styles() {
     if ( !is_admin() ) {
 
         // modernizr (3.6.0 2018-04-17)
-        wp_enqueue_script( 'modernizr', get_theme_file_uri() . '/library/js/libs/modernizr-custom-min.js', array(), '3.6.0', false );
+        // wp_enqueue_script( 'modernizr', get_theme_file_uri() . '/library/js/libs/modernizr-custom-min.js', array(), '3.6.0', false );
 
         // register main stylesheet
         wp_enqueue_style( 'plate-stylesheet', get_theme_file_uri() . '/library/css/style.css', array(), '', 'all' );
@@ -432,7 +276,7 @@ function plate_scripts_and_styles() {
         wp_enqueue_script( 'plate-js', get_theme_file_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
         // accessibility (a11y) scripts
-        wp_enqueue_script( 'plate-a11y', get_theme_file_uri() . '/library/js/a11y.js', array( 'jquery' ), '', true );
+        // wp_enqueue_script( 'plate-a11y', get_theme_file_uri() . '/library/js/a11y.js', array( 'jquery' ), '', true );
 
         $wp_styles->add_data( 'plate-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
@@ -575,7 +419,7 @@ function plate_filter_ptags_on_images( $content ) {
 }
 
 
-// Simple function to remove the [...] from excerpt and add a 'Read More »' link.
+// Simple function to remove the [...] from excerpt and add a 'Read More ï¿½' link.
 function plate_excerpt_more($more) {
     global $post;
     // edit here if you like
@@ -644,6 +488,7 @@ function plate_theme_support() {
     register_nav_menus( array(
 
         'main-nav' => __( 'The Main Menu', 'platetheme' ),   // main nav in header
+        'case-studies' => __( 'Case Studies', 'platetheme' ),   // main nav in header
         // 'footer-links' => __( 'Footer Links', 'platetheme' ) // secondary nav in footer. Uncomment to use or edit.
 
         )
@@ -1155,17 +1000,17 @@ function plate_dashboard_widget_init() {
 
 // Live Reload for Grunt during development
 // If your site is running locally it will load the livereload js file into the footer. This makes it possible for the browser to reload after a change has been made. 
-if ( in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1')) ) {
+// if ( in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1')) ) {
 
-    function livereload_script() {
+//     function livereload_script() {
 
-    	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-    	wp_enqueue_script('livereload');
+//     	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+//     	wp_enqueue_script('livereload');
 
-    }
+//     }
   
-    add_action( 'wp_enqueue_scripts', 'livereload_script' );
+//     add_action( 'wp_enqueue_scripts', 'livereload_script' );
 
-}
+// }
 
 ?>
