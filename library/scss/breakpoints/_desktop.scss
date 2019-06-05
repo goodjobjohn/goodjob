@@ -1,18 +1,18 @@
 /******************************************************************
-Site Name:
-Author:
+Stylesheet: Desktop Stylesheet
 
-Stylesheet: Tablet & Small Desktop Stylesheet
-
-This stylesheet will be used for tablets and larger devices
-like desktops. CSS Grid starts working its magic here so you
-can start to have fun with your layout(s).
+Fixed 1000px wide
 
 ******************************************************************/
+
+html {
+    font-size: 1em; // 1em = 16px; Adjust if you want a different baseline.
+}
 
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+
 
 body {
     // Grid

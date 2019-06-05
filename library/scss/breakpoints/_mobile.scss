@@ -1,11 +1,13 @@
 /******************************************************************
-Stylesheet: Base Stylesheet
+Stylesheet: Mobile and Base Stylesheet 
+
 GLOBAL STYLES
 *********************/
 
 html {
     font-size: .78em; // 1em = 16px; Adjust if you want a different baseline.
     background-color: #EDEDED;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -232,7 +234,7 @@ NAVIGATION STYLES
     border: 0;
     list-style-type: none;
     height: 50px;
-    font-size: 10px;
+    font-size: .8em;
 
     ul {
         display: flex;
@@ -334,6 +336,8 @@ POSTS & CONTENT STYLES
 
     .post {
         margin-bottom: 92px;
+
+        p { margin: 3em 0; }
 
         .article-header {
             // margin-top: 50px;
@@ -471,7 +475,27 @@ FOOTER STYLES
     text-align: right;
     color: $text-black;
     margin-right: 25px;
+    font-size: .6em;
 }
 .single .copyright {
     color: $text-black;
 }
+
+/* --- GUTENBURGER --- */
+.wp-block-separator {
+   border-bottom: 1px solid #EDEDED;
+   margin-left: 0;
+}
+.wp-block-quote {
+    border-left: 4px solid $text-black;
+}
+
+.wp-block-image figcaption {
+    font-size: 10px;
+}
+
+/* --- UTILITIES --- */
+.anchor {
+    position: absolute;
+    transform: translateY(-10vh);
+  }

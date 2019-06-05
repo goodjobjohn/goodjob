@@ -37,17 +37,17 @@
 
 			<section class="entry-content" itemprop="articleBody">	
 				
-				<blockquote class="wp-block-quote" style="margin-top:calc(100vh - 62px);">
-					<h3>I'm <em>your</em> Digital Storyteller</h3>
-					
-					<p>I’m <strong>creative</strong> + <strong>technical</strong>.<br></p><p>I build web for <strong>creators </strong>+<strong> innovators</strong>.<br></p><p>When we work together, I take the time to get to know you and your business. <br></p><p>I’m not here to add to the noise, I’m here to create a <strong>narrative</strong> for your brand that <strong>connects</strong>, builds <strong>trust</strong> and nurtures <strong>loyalty</strong>. <br></p></p>
+				<blockquote class="wp-block-quote" style="margin-top:calc(100vh - 62px);">					
+					<span class="anchor" id="about"></span>
+					<h3>I'm <em>your</em> Digital Storyteller</h3>					
+					<p>I’m <strong>creative</strong> + <strong>technical</strong>.<br></p><p>I build web for <strong>creators </strong>+<strong> innovators</strong>.<br></p><p>When we work together, I take the time to get to know you and your business. <br></p><p>I’m not here to add to the noise, I’m here to create a <strong>narrative</strong> for your brand that <strong>connects</strong>, builds <strong>trust</strong> and nurtures <strong>loyalty</strong>. <br></p></p>				
 				</blockquote>
 
 				<div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 
 				
-				<div id="case-studies">
-					
+				<div id="case-studies-block">
+					<span class="anchor" id="case-studies"></span>	
 					<blockquote class="wp-block-quote">
 						<h3>Case Studies</h3>
 						<?php wp_nav_menu( array(
@@ -68,6 +68,7 @@
 				<div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 
 				<div id="contact" class="contact">
+					<span class="anchor" id="talktome"></span>
 					<h3>Talk to me.</h3>
 					<!-- <input name="name" value="name">
 					<input name="email" value="email">
