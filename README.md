@@ -9,9 +9,12 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.1
+Version: 1.2
 
 *******************************************************************
+
+### 1.2 2019-06-10
+- changed homepage template
 
 ### 1.1 2019-06-05
 - changed some styles
