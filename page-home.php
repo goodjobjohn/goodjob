@@ -49,7 +49,7 @@
 				<div id="case-studies-block">
 					<span class="anchor" id="case-studies"></span>	
 					<blockquote class="wp-block-quote">
-						<h3>Here's my latest case studies.</h3>
+						<h3>My latest case studies.</h3>
 						<?php wp_nav_menu( array(
 
 							'container' => false,                          // remove nav container
