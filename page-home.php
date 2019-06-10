@@ -49,7 +49,7 @@
 				<div id="case-studies-block">
 					<span class="anchor" id="case-studies"></span>	
 					<blockquote class="wp-block-quote">
-						<h3>I have some case studies here for <em>you</em>.</h3>
+						<h3>Here's my latest case studies.</h3>
 						<?php wp_nav_menu( array(
 
 							'container' => false,                          // remove nav container
@@ -69,7 +69,7 @@
 
 				<div id="contact" class="contact">
 					<span class="anchor" id="talktome"></span>
-					<h3>When you're ready to talk, shoot me a message.</h3>
+					<h3>Let's tell <em>your</em> story.</h3>
 					<!-- <input name="name" value="name">
 					<input name="email" value="email">
 					<textarea name="message" value="message">message</textarea>
