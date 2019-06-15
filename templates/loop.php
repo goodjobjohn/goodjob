@@ -32,6 +32,10 @@
 
 		<section class="entry-content" itemprop="articleBody">
 			
+			<div class="featured-image">
+				<?php the_post_thumbnail('full'); ?>
+			</div>
+
 			<?php the_content(); ?>
 		
 		</section> <?php // end article section ?>

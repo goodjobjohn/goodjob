@@ -72,9 +72,6 @@ function plate_lunch() {
     // adding sidebars to Wordpress
     add_action( 'widgets_init', 'plate_register_sidebars' );
 
-    // cleaning up <p> tags around images
-    add_filter( 'the_content', 'plate_filter_ptags_on_images' );
-
     // clean up the default WP excerpt
     add_filter( 'excerpt_more', 'plate_excerpt_more' );
 
@@ -373,19 +370,19 @@ function disable_emojicons_tinymce( $plugins ) {
 * I'm commenting this out by default. Why? Because Gravity Forms *requires* it
 * for some form functions to work...***eye roll***. 
 */
-// add_action( 'wp_default_scripts', 'plate_dequeue_jquery_migrate' );
+add_action( 'wp_default_scripts', 'plate_dequeue_jquery_migrate' );
 
-// function plate_dequeue_jquery_migrate( $scripts ) {
+function plate_dequeue_jquery_migrate( $scripts ) {
 
-//     if (! empty( $scripts->registered['jquery'] ) ) {
+    if (! empty( $scripts->registered['jquery'] ) ) {
 
-//         $jquery_dependencies = $scripts->registered['jquery']->deps;
+        $jquery_dependencies = $scripts->registered['jquery']->deps;
 
-//         $scripts->registered['jquery']->deps = array_diff( $jquery_dependencies, array( 'jquery-migrate' ) );
+        $scripts->registered['jquery']->deps = array_diff( $jquery_dependencies, array( 'jquery-migrate' ) );
 
-//     }
+    }
 
-// }
+}
 
 // Remove wp-embed.min.js from the front end. Commented out by default as you may need it.
 // See here: https://wordpress.stackexchange.com/questions/211701/what-does-wp-embed-min-js-do-in-wordpress-4-4
@@ -404,19 +401,6 @@ function disable_emojicons_tinymce( $plugins ) {
 //       // Remove oEmbed-specific JavaScript from the front-end and back-end.
 //       remove_action('wp_head', 'wp_oembed_add_host_js');
 //   }, PHP_INT_MAX - 1 );
-
-
-// Remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-// This only works for the main content box, not using ACF or other page builders.
-// Added small bit of javascript in scripts.js that will work everywhere. 
-// Keeping this in in case people are still using it.
-add_filter('the_content', 'plate_filter_ptags_on_images');
-
-function plate_filter_ptags_on_images( $content ) {
-
-    return preg_replace('/<pp>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-
-}
 
 
 // Simple function to remove the [...] from excerpt and add a 'Read More �' link.
@@ -441,33 +425,6 @@ function plate_theme_support() {
     // default thumb size
     set_post_thumbnail_size(125, 125, true);
 
-    // wp custom background (thx to @bransonwerner for update)
-    add_theme_support( 'custom-background', array(
-
-        'default-image' => '',    // background image default
-        'default-color' => '',    // background color default (dont add the #)
-        'wp-head-callback' => '_custom_background_cb',
-        'admin-head-callback' => '',
-        'admin-preview-callback' => '',
-
-        )
-    );
-
-    // Custom Header Image
-    add_theme_support( 'custom-header', array(
-
-            'default-image'      => get_template_directory_uri() . '/library/images/header-image.png',
-            'default-text-color' => '000',
-            'width'              => 1440,
-            'height'             => 220,
-            'flex-width'         => true,
-            'flex-height'        => true,
-            'header-text'        => true,
-            'uploads'            => true,
-            'wp-head-callback'   => 'plate_style_header',
-
-        ) 
-    );
 
     // Custom Logo
     add_theme_support( 'custom-logo', array(
@@ -512,37 +469,6 @@ function plate_theme_support() {
         ) 
     );
 
-    /* 
-    * POST FORMATS
-    * Ahhhh yes, the wild and wonderful world of Post Formats. 
-    * I've never really gotten into them but I could see some
-    * situations where they would come in handy. Here's a few
-    * examples: https://www.competethemes.com/blog/wordpress-post-format-examples/
-    * 
-    * This theme doesn't use post formats per se but we need this 
-    * to pass the theme check.
-    * 
-    * We may add better support for post formats in the future.
-    * 
-    * If you want to use them in your project, do so by all means. 
-    * We won't judge you. Ok, maybe a little bit.
-    *
-    */
-
-    add_theme_support( 'post-formats', array(
-
-        'aside',             // title less blurb
-        'gallery',           // gallery of images
-        'link',              // quick link to other site
-        'image',             // an image
-        'quote',             // a quick quote
-        'status',            // a Facebook like status update
-        'video',             // video
-        'audio',             // audio
-        'chat'               // chat transcript
-
-        )
-    );
 
     // Gutenberg support: https://www.billerickson.net/getting-your-theme-ready-for-gutenberg/
     // https://wordpress.org/gutenberg/handbook/extensibility/theme-support/

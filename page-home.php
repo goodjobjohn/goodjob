@@ -8,7 +8,7 @@
 */
 ?>
 
-<?php get_header('home'); ?>
+<?php get_header(); ?>
 	
 	<main id="main" class="main wrap" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
 
@@ -19,17 +19,15 @@
 			<header class="article-header  preload">	
 				<div class="sticky50">
 					<h1 class="page-title" itemprop="headline">Hey, I’m John.</h1>
-					<p>I’m a <strong>developer</strong> and <strong>designer</strong> from the Victorian Surf Coast, Australia.</p>
+					<p>I’m a <strong>designer</strong> and <strong>developer</strong> from the Victorian Surf Coast, Australia.</p>
 					
-					<div class="social">
-						
+					<div class="social">						
 						<a href="https://instagram.com/_goodjobjohn/" target="_blank" rel="noopener">
 							<img class="alignnone wp-image-36 size-full" role="img" src="<?php echo get_template_directory_uri(); ?>/library/images/instagram.svg" alt="" width="22" height="22" />
 						</a>
 						<a href="https://twitter.com/_goodjobjohn" target="_blank" rel="noopener">
 							<img class="alignnone wp-image-35 size-full" role="img" src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.svg" alt="" width="24" height="19" />
 						</a>
-
 					</div>
 				</div>
 

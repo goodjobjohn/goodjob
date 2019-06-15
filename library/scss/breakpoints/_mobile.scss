@@ -341,10 +341,12 @@ POSTS & CONTENT STYLES
 
         .article-header {
             // margin-top: 50px;
+
             .single-title { 
                 position: sticky;
                 top:30px;
             }
+
             .post-cat, .post-tag {
                 margin-bottom: 10px; 
                 position: sticky;
@@ -499,3 +501,21 @@ FOOTER STYLES
     position: absolute;
     transform: translateY(-10vh);
   }
+
+/* --- 404 --- */
+#main #post-not-found {
+    height: calc( 100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .article-header {
+        height: auto;
+    }
+}
+
+/* --- PAGE: LOGO ANIMATION ---*/
+.featured-video > video {
+    width: 340px;
+    margin-left: -50px;
+}

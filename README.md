@@ -9,9 +9,15 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.2
+Version: 1.3
 
 *******************************************************************
+### 1.3 2019-06-14
+- change text on home
+- add excerpt to home
+- removed theme support for 'background styles' and 'header image' 'post formats' and some other stuff
+- new page template - logo animation
+- removed p tag removal function on images
 
 ### 1.2 2019-06-10
 - changed homepage template

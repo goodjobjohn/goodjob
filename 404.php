@@ -1,12 +1,8 @@
 <?php get_header(); ?>
-	
-	<div id="content">
-
-		<div id="inner-content" class="wrap">
 
 			<main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
 
-				<article id="post-not-found" class="hentry">
+				<article id="post-not-found" class="hentry page ">
 
 					<header class="article-header">
 
@@ -18,14 +14,14 @@
 
 						<div class="404-txt">
 
-							<h3><?php _e( 'I\'m sorry Dave, I\'m afraid I can\'t do that.', 'platetheme' ); ?></h3>
-							<p><?php _e( 'We couldn\'t find what you are looking for, please try searching.', 'platetheme' ); ?></p>
+							<h3><?php _e( 'Screeeeeeech!', 'platetheme' ); ?></h3>
+							<p><?php _e( 'We couldn\'t find what you are looking for, please go back and try again.', 'platetheme' ); ?></p>
 
 						</div>
 
 					</section>
 
-					<section class="search-outer">
+					<!-- <section class="search-outer">
 
 						<div class="search-form-outer">
                             
@@ -33,7 +29,7 @@
                             
                         </div>
 
-					</section>
+					</section> -->
 
 					<footer class="article-footer">
 
@@ -43,10 +39,6 @@
 
 			</main>
 
-		</div>
-
-	</div>
-
-    <?php get_sidebar(); ?>
+    <!-- <?php get_sidebar(); ?> -->
 
 <?php get_footer(); ?>

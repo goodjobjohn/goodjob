@@ -7,7 +7,7 @@
 */
 ?>
 
-<?php get_header('home'); ?>
+<?php get_header(); ?>
 
 			<main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
 

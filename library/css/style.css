@@ -985,6 +985,20 @@ FOOTER STYLES
   position: absolute;
   transform: translateY(-10vh); }
 
+/* --- 404 --- */
+#main #post-not-found {
+  height: calc( 100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #main #post-not-found .article-header {
+    height: auto; }
+
+/* --- PAGE: LOGO ANIMATION ---*/
+.featured-video > video {
+  width: 340px;
+  margin-left: -50px; }
+
 @media only screen and (min-width: 999px) {
   /******************************************************************
 Stylesheet: Desktop Stylesheet
@@ -1017,7 +1031,6 @@ GLOBAL STYLES
       #main .page .article-header, #main .post .article-header {
         grid-area: left;
         padding-right: 50px;
-        height: 100%;
         justify-content: flex-start;
         padding-top: 30vh; }
         #main .page .article-header .sticky50, #main .post .article-header .sticky50 {
@@ -1056,7 +1069,14 @@ SIDEBARS & ASIDES
     margin-top: 200px; }
   .inner-sidebar {
     position: sticky;
-    top: 0; } }
+    top: 0; }
+  /* --- 404 --- */
+  #main #post-not-found .article-header {
+    margin-left: 50px; }
+  /* --- PAGE: LOGO ANIMATION ---*/
+  .featured-video > video {
+    width: 500px;
+    margin-left: auto; } }
 
 /*********************
 PRINT STYLESHEET
