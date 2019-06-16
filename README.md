@@ -3,15 +3,19 @@
 
 Description: Good job, is a theme for John, by John, about John. Good job, John. 
 
-About: Based on studio.bio Plate starter theme. 
+About theme: Based on Plate starter theme by studio.bio. Stripped out a lot anddded my own way of doing things. 
 
 Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.3
+Version: 1.4
 
 *******************************************************************
+### 1.4 2019-06-15
+- add index under title to animation template (buggy)
+- added google analytics
+
 ### 1.3 2019-06-14
 - change text on home
 - add excerpt to home
