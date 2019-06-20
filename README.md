@@ -9,9 +9,14 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4
+Version: 1.4.1
 
 *******************************************************************
+### 1.4.1 2019-06-20
+- changed desktop root font size
+- changed css to respect original design 
+- updates to animation template
+
 ### 1.4 2019-06-15
 - add index under title to animation template (buggy)
 - added google analytics

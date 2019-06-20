@@ -5,7 +5,7 @@ GLOBAL STYLES
 *********************/
 
 html {
-    font-size: .78em; // 1em = 16px; Adjust if you want a different baseline.
+    font-size: 0.875em; // 0.875em = 14px old = .78em; // 1em = 16px; Adjust if you want a different baseline.
     background-color: #EDEDED;
     scroll-behavior: smooth;
 }
@@ -96,7 +96,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    margin-top: 0.88em;
+    margin-top: 1.88em;
     font-size: 2em;
 }
 
@@ -465,6 +465,7 @@ FOOTER STYLES
 .footer {
     position: relative;
     bottom: 50px;
+    margin-top: 300px;
 }
 
 .footer-links {
@@ -490,6 +491,17 @@ FOOTER STYLES
 }
 .wp-block-quote {
     border-left: 4px solid $text-black;
+    color: $john-red;
+    font-size: 1.3em;
+    font-style: italic;
+    margin: 30px 0;
+    border-left: none;
+
+    cite{
+        color: $john-red;
+        text-align: right;
+        display: block;
+    }
 }
 
 .wp-block-image figcaption {
@@ -518,4 +530,12 @@ FOOTER STYLES
 .featured-video > video {
     width: 340px;
     margin-left: -50px;
+}
+
+.index > a {
+    color: $john-red;
+    font-weight: 400;
+    &:hover {
+        color: white;
+    }
 }

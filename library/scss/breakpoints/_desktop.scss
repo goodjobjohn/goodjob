@@ -6,7 +6,7 @@ Fixed 1000px wide
 ******************************************************************/
 
 html {
-    font-size: 1em; // 1em = 16px; Adjust if you want a different baseline.
+    // font-size: 1em; // 1em = 16px; Adjust if you want a different baseline.
 }
 
 /*********************
@@ -46,25 +46,29 @@ GLOBAL STYLES
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-areas: 'left right';
+        margin: 0 100px;
+    
         
         .article-header { 
             grid-area: left; 
             padding-right: 50px;
-            // height: 100%; removed messing with mobile vh setting
+            height: 100%; // removed messing with mobile vh setting
             justify-content: flex-start;
             padding-top: 30vh;
     
-            .sticky50 { 
-                position: sticky;
-                top: 50px;
+            .sticky { 
+                position: sticky;            
+                top: 100px;
             }
+           
+            p { font-size: .9em; }
         }
     }
     
     .entry-content { 
         grid: right; 
         //margin-top: 100vh;
-        padding: 0 50px;
+        padding: 0 0 0 50px;
         .featured-image {
             height: calc( 100vh - 52px );
             padding-top: 17vh;
@@ -94,7 +98,7 @@ GLOBAL STYLES
     .article-footer {
         max-width: 1000px;
         height: 300px;
-
+        margin-left: -100px;
     }  
 }
 
@@ -127,7 +131,13 @@ SIDEBARS & ASIDES
 }
 
 /* --- PAGE: LOGO ANIMATION ---*/
+.featured-video {
+    height: calc( 100vh - 60px );
+}
 .featured-video > video {
     width: 500px;
     margin-left: auto;
+    position: sticky;
+    top: 0;
+
 }

@@ -15,29 +15,20 @@
 
                 <header class="article-header">
 
-                    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+                    <div class="sticky">
+                        <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-                    <div class="index">
+                        <div class="index">
 
-                    <?php if( have_rows('index') ): ?>
-                        <?php while( have_rows('index') ): the_row(); ?>
-
-                            <?php 
-                                // vars
-                                $label = get_sub_field('label');
-                                $anchor = get_sub_field('anchor');
-                                // $page = get_permalink(); 
-                            ?>
-                                                   
-                            <!-- <a href="<?php echo $anchor; ?>">
-                                <?php echo $label; ?>
-                            </a>                         -->
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-
-                    
-
-                        
+                        <?php if( have_rows('index') ): ?>
+                            <?php while( have_rows('index') ): the_row(); ?>
+                                                    
+                                <a href="<?php echo get_permalink() . get_sub_field('anchor'); ?>">
+                                    <?php echo get_sub_field('label') ?>
+                                </a></br>                      
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        </div>
                     </div>
 
                 </header> <?php // end article header ?>

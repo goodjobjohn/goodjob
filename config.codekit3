@@ -100,17 +100,6 @@
 		"oAP": "/functions.php",
 		"oF": 0
 		},
-	"/Gruntfile.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/Gruntfile-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/header-full.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -929,22 +918,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/LICENSE": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/LICENSE",
-		"oF": 0
-		},
-	"/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"/page-custom-loop.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1087,16 +1060,6 @@
 		"oAP": "/single.php",
 		"oF": 0
 		},
-	"/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/style-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1106,16 +1069,6 @@
 		"oAP": "/style-min.css",
 		"oF": 0,
 		"oS": 0
-		},
-	"/style.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/style.min-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/taxonomy-custom_cat.php": {
 		"cB": 0,

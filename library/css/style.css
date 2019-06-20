@@ -345,22 +345,6 @@ Stylesheet: Typography
 /*********************
 FONT STACKS
 *********************/
-p {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3;
-  -webkit-font-feature-settings: "liga", "dlig";
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig"; }
-
 /******************************************************************
 Site Name:
 Author:
@@ -610,7 +594,7 @@ Stylesheet: Mobile and Base Stylesheet
 GLOBAL STYLES
 *********************/
 html {
-  font-size: .78em;
+  font-size: 0.875em;
   background-color: #EDEDED;
   scroll-behavior: smooth; }
 
@@ -682,7 +666,7 @@ h1, .h1 {
   font-size: 2.310em; }
 
 h2, .h2 {
-  margin-top: 0.88em;
+  margin-top: 1.88em;
   font-size: 2em; }
 
 h3, .h3 {
@@ -958,7 +942,8 @@ FOOTER STYLES
 *********************/
 .footer {
   position: relative;
-  bottom: 50px; }
+  bottom: 50px;
+  margin-top: 300px; }
 
 .copyright {
   text-align: right;
@@ -975,7 +960,16 @@ FOOTER STYLES
   margin-left: 0; }
 
 .wp-block-quote {
-  border-left: 4px solid #333333; }
+  border-left: 4px solid #333333;
+  color: #FD8787;
+  font-size: 1.3em;
+  font-style: italic;
+  margin: 30px 0;
+  border-left: none; }
+  .wp-block-quote cite {
+    color: #FD8787;
+    text-align: right;
+    display: block; }
 
 .wp-block-image figcaption {
   font-size: 10px; }
@@ -999,6 +993,12 @@ FOOTER STYLES
   width: 340px;
   margin-left: -50px; }
 
+.index > a {
+  color: #FD8787;
+  font-weight: 400; }
+  .index > a:hover {
+    color: white; }
+
 @media only screen and (min-width: 999px) {
   /******************************************************************
 Stylesheet: Desktop Stylesheet
@@ -1006,8 +1006,6 @@ Stylesheet: Desktop Stylesheet
 Fixed 1000px wide
 
 ******************************************************************/
-  html {
-    font-size: 1em; }
   /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1027,18 +1025,22 @@ GLOBAL STYLES
     #main .page, #main .post {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      grid-template-areas: 'left right'; }
+      grid-template-areas: 'left right';
+      margin: 0 100px; }
       #main .page .article-header, #main .post .article-header {
         grid-area: left;
         padding-right: 50px;
+        height: 100%;
         justify-content: flex-start;
         padding-top: 30vh; }
-        #main .page .article-header .sticky50, #main .post .article-header .sticky50 {
+        #main .page .article-header .sticky, #main .post .article-header .sticky {
           position: sticky;
-          top: 50px; }
+          top: 100px; }
+        #main .page .article-header p, #main .post .article-header p {
+          font-size: .9em; }
     #main .entry-content {
       grid: right;
-      padding: 0 50px; }
+      padding: 0 0 0 50px; }
       #main .entry-content .featured-image {
         height: calc( 100vh - 52px);
         padding-top: 17vh;
@@ -1058,7 +1060,8 @@ GLOBAL STYLES
         margin: 30px 0; }
     #main .article-footer {
       max-width: 1000px;
-      height: 300px; }
+      height: 300px;
+      margin-left: -100px; }
   /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1074,9 +1077,13 @@ SIDEBARS & ASIDES
   #main #post-not-found .article-header {
     margin-left: 50px; }
   /* --- PAGE: LOGO ANIMATION ---*/
+  .featured-video {
+    height: calc( 100vh - 60px); }
   .featured-video > video {
     width: 500px;
-    margin-left: auto; } }
+    margin-left: auto;
+    position: sticky;
+    top: 0; } }
 
 /*********************
 PRINT STYLESHEET

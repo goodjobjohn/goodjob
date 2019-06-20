@@ -17,8 +17,8 @@
 		<article id="post-14" class="post-14 page type-page status-publish hentry" role="article" itemscope="" itemtype="https://schema.org/BlogPosting">
 
 			<header class="article-header  preload">	
-				<div class="sticky50">
-					<h1 class="page-title" itemprop="headline">Hey, I’m John.</h1>
+				<div class="sticky">
+					<h1 class="page-title" itemprop="headline"><em>Hey,</em> I’m John.</h1>
 					<p>I’m a <strong>designer</strong> and <strong>developer</strong> from the Victorian Surf Coast, Australia.</p>
 					
 					<div class="social">						
@@ -35,18 +35,18 @@
 
 			<section class="entry-content" itemprop="articleBody">	
 				
-				<blockquote class="wp-block-quote" style="margin-top:calc(100vh - 62px);">					
+				<div style="margin-top:calc(100vh - 62px);">					
 					<span class="anchor" id="about"></span>
 					<h3>I'm <em>your</em> Digital Storyteller</h3>					
 					<p>I’m <strong>creative</strong> + <strong>technical</strong>.<br></p><p>I build web for <strong>creators </strong>+<strong> innovators</strong>.<br></p><p>When we work together, I take the time to get to know you and your business. <br></p><p>I’m not here to add to the noise, I’m here to create a <strong>narrative</strong> for your brand that <strong>connects</strong>, builds <strong>trust</strong> and nurtures <strong>loyalty</strong>. <br></p></p>				
-				</blockquote>
+				</div>
 
 				<div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 
 				
 				<div id="case-studies-block">
 					<span class="anchor" id="case-studies"></span>	
-					<blockquote class="wp-block-quote">
+					
 						<h3>My latest case studies.</h3>
 						<?php wp_nav_menu( array(
 
@@ -58,7 +58,7 @@
 
 							)
 						); ?>	
-					</blockquote>
+					
 
 				</div>
 				
