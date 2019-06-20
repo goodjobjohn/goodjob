@@ -1165,6 +1165,14 @@
 		"oA": 0,
 		"oAP": "/templates/post-navigation.php",
 		"oF": 0
+		},
+	"/templates/stripe.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/stripe.php",
+		"oF": 0
 		}
 	},
 "hooks": [

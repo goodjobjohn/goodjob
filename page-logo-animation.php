@@ -41,7 +41,7 @@
                         if ( isset($featuredVid)) {                       
                     ?>
                         <div class="featured-video">
-                            <video controls width="500" autoplay loop muted >
+                            <video width="500" autoplay loop muted >
                                 <source src="<?php echo $featuredVid; ?>" type="video/mp4">
                                 <p>Sorry, your browser doesn't support embedded videos.</p>
                             </video>
@@ -51,6 +51,8 @@
                     ?>
 
                     <?php the_content(); ?>
+
+                    <?php get_template_part( 'templates/stripe'); ?>
 
                 </section> <?php // end article section ?>
 

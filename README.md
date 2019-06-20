@@ -9,10 +9,14 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4.1
+Version: 1.4.2
 
 *******************************************************************
-### 1.4.1 2019-06-20
+### 1.4.2 2019-06-20
+- added stripe payment to animation page
+- added success and canceled pages for payment
+
+### 1.4.1 2019-06-18
 - changed desktop root font size
 - changed css to respect original design 
 - updates to animation template
