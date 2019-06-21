@@ -4,7 +4,7 @@
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 <button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-sku_FHwlEyyxGtfXWl"
+  id="checkout-button-sku_FILsoBuoZfCOIW"
   role="link"
 >
   Checkout
@@ -13,22 +13,22 @@
 <div id="error-message"></div>
 
 <script>
-  var stripe = Stripe('pk_live_UWnJulsyqp4b4Bedqa08PzLU00ntzZsWyX');
+  var stripe = Stripe('pk_test_1IkNGNsG0KlPGPDjP41R6ERN00vUOqBk68');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_FHwlEyyxGtfXWl');
+  var checkoutButton = document.getElementById('checkout-button-sku_FILsoBuoZfCOIW');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_FHwlEyyxGtfXWl', quantity: 1}],
+      items: [{sku: 'sku_FILsoBuoZfCOIW', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://goodjobjohn.com/success',
-      cancelUrl: 'https://goodjobjohn.com/canceled',
+      successUrl: 'https://goodjobjohn.com/logo-animation/success',
+      cancelUrl: 'https://goodjobjohn.com/logo-animationcanceled',
     })
     .then(function (result) {
       if (result.error) {

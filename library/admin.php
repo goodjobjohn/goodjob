@@ -65,7 +65,7 @@ function plate_login_title() { return get_option( 'blogname' ); }
 // calling it only on the login page
 add_action( 'login_enqueue_scripts', 'plate_login_css', 10 );
 add_filter( 'login_headerurl', 'plate_login_url' );
-add_filter( 'login_headertitle', 'plate_login_title' );
+add_filter( 'login_headertext', 'plate_login_title' );
 
 
 /*********************

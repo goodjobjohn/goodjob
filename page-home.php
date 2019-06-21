@@ -44,7 +44,14 @@
 				<div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 
 				
-				<div id="case-studies-block">
+				<div id="animated-logos">
+					<a href="<?php echo the_permalink(); ?>logo-animation/">
+						<h3>PROMO: Motion inspires emotion!</h3>
+						<p>For my new offering of logo animation I'm running a little promotion. For a limited time I'm slashing the price for custom animated logos. Click here to find out more.</p>
+					</a>
+				</div>
+				
+				<!-- <div id="case-studies-block">
 					<span class="anchor" id="case-studies"></span>	
 					
 						<h3>My latest case studies.</h3>
@@ -57,10 +64,9 @@
 							'theme_location' => 'case-studies',                // where it's located in the theme
 
 							)
-						); ?>	
-					
-
-				</div>
+						); ?>						
+						
+				</div> -->
 				
 
 				<div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>

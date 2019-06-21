@@ -9,9 +9,13 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4.2
+Version: 1.4.3
 
 *******************************************************************
+### 1.4.3 2019-06-21
+- fixed 'login_headertitle is deprecated since version 5.2.0! Use login_headertext instead'
+- changes to home template
+
 ### 1.4.2 2019-06-20
 - added stripe payment to animation page
 - added success and canceled pages for payment
