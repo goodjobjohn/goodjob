@@ -918,6 +918,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/page-case-studies.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-case-studies.php",
+		"oF": 0
+		},
 	"/page-custom-loop.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -964,6 +972,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-logo-animation.php",
+		"oF": 0
+		},
+	"/page-payment.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-payment.php",
 		"oF": 0
 		},
 	"/page-sidebar.php": {

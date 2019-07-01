@@ -9,12 +9,21 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4.3
+Version: 1.4.5
 
 *******************************************************************
+### 1.4.5 2019-07-01
+- added payment template
+- updated stripe payment from test to live
+- tweaks to html and css throughout
+
+### 1.4.4 2019-06-23
+- multiple fixes to animation page and throughout site.
+
 ### 1.4.3 2019-06-21
 - fixed 'login_headertitle is deprecated since version 5.2.0! Use login_headertext instead'
 - changes to home template
+- fix mobile .wp-block-media-text>figure>img, .wp-block-media-text>figure>video
 
 ### 1.4.2 2019-06-20
 - added stripe payment to animation page

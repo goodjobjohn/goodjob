@@ -33,23 +33,32 @@
 
 			</header> 
 
-			<section class="entry-content" itemprop="articleBody">	
-				
-				<div style="margin-top:calc(100vh - 62px);">					
+			<section class="entry-content" itemprop="articleBody">			
+
+				<div class="content-title">					
 					<span class="anchor" id="about"></span>
 					<h3>I'm <em>your</em> Digital Storyteller</h3>					
-					<p>I’m <strong>creative</strong> + <strong>technical</strong>.<br></p><p>I build web for <strong>creators </strong>+<strong> innovators</strong>.<br></p><p>When we work together, I take the time to get to know you and your business. <br></p><p>I’m not here to add to the noise, I’m here to create a <strong>narrative</strong> for your brand that <strong>connects</strong>, builds <strong>trust</strong> and nurtures <strong>loyalty</strong>. <br></p></p>				
+					
+					<p>I’m <strong>creative</strong> + <strong>technical</strong>.</p>
+					
+					<p>I build web for <strong>creators </strong>+<strong> innovators</strong>.</p>
+
+					<p>When we work together, I take the time to get to know you and your business.</p>
+					
+					<p>I’m not here to add to the noise, I’m here to create a <strong>narrative</strong> for your brand that <strong>connects</strong>, builds <strong>trust</strong> and nurtures <strong>loyalty</strong>.</p>				
+
+					<p>A former co-owner and creative director of Melbourne digital agency In10tion, I moved to the coast to draw breath as a creative.</p>
 				</div>
 
 				<div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
-
 				
-				<div id="animated-logos">
-					<a href="<?php echo the_permalink(); ?>logo-animation/">
-						<h3>PROMO: Motion inspires emotion!</h3>
-						<p>For my new offering of logo animation I'm running a little promotion. For a limited time I'm slashing the price for custom animated logos. Click here to find out more.</p>
-					</a>
+				<div class="animated-logos">
+					
+						<h3>Motion <em>inspires</em> emotion</h3>
+						<p>To celebrate my new site, I’m offering a promo rate of $250 for custom animated logos. Give me 5 seconds - and I’ll bring your brand to life. <a href="<?php echo the_permalink(); ?>logo-animation/">Click here</a> to find out more about adding the finishing flowing touch to your narrative.</p>
+					
 				</div>
+				
 				
 				<!-- <div id="case-studies-block">
 					<span class="anchor" id="case-studies"></span>	

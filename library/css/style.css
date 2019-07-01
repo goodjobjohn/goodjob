@@ -827,6 +827,9 @@ POSTS & CONTENT STYLES
       flex-direction: column;
       justify-items: center;
       justify-content: center; }
+      #main .page .article-header .single-title, #main .post .article-header .single-title {
+        position: sticky;
+        top: 100px; }
       #main .page .article-header a, #main .post .article-header a {
         display: inline-block; }
         #main .page .article-header a img, #main .post .article-header a img {
@@ -844,11 +847,11 @@ POSTS & CONTENT STYLES
       margin: 3em 0; }
     #main .post .article-header .single-title {
       position: sticky;
-      top: 30px; }
+      top: 100px; }
     #main .post .article-header .post-cat, #main .post .article-header .post-tag {
       margin-bottom: 10px;
       position: sticky;
-      top: 10px; }
+      top: 80px; }
       #main .post .article-header .post-cat span, #main .post .article-header .post-tag span {
         padding: 1px 3px;
         color: white;
@@ -954,6 +957,22 @@ FOOTER STYLES
 .single .copyright {
   color: #333333; }
 
+/* --- HOME --- */
+a h3:hover, a p:hover {
+  color: white; }
+
+.animated-logos {
+  border: 1px solid #FD8787;
+  border-radius: 10px;
+  position: relative;
+  padding: 20px; }
+  .animated-logos::before {
+    content: 'PROMOTION';
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px; }
+
 /* --- GUTENBURGER --- */
 .wp-block-separator {
   border-bottom: 1px solid #EDEDED;
@@ -970,6 +989,13 @@ FOOTER STYLES
     color: #FD8787;
     text-align: right;
     display: block; }
+
+.wp-block-media-text {
+  display: block; }
+
+.wp-block-media-text > figure > img, .wp-block-media-text > figure > video {
+  width: 340px;
+  margin-left: -50px; }
 
 .wp-block-image figcaption {
   font-size: 10px; }
@@ -1043,8 +1069,11 @@ GLOBAL STYLES
       padding: 0 0 0 50px; }
       #main .entry-content .featured-image {
         height: calc( 100vh - 52px);
-        padding-top: 17vh;
+        margin-top: 17vh;
         /* Hide the toggle checkbox */ }
+        #main .entry-content .featured-image label {
+          position: sticky;
+          top: 0; }
         #main .entry-content .featured-image #expand-toggle {
           display: none;
           cursor: zoom-in; }
@@ -1065,6 +1094,12 @@ GLOBAL STYLES
   /*********************
 LAYOUT & GRID STYLES
 *********************/
+  /* Guten */
+  .wp-block-media-text {
+    display: grid; }
+  .wp-block-media-text > figure > img, .wp-block-media-text > figure > video {
+    width: 100%;
+    margin-left: 0; }
   /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -1073,6 +1108,9 @@ SIDEBARS & ASIDES
   .inner-sidebar {
     position: sticky;
     top: 0; }
+  /* --- HOME --- */
+  .content-title {
+    margin-top: calc(100vh - 62px); }
   /* --- 404 --- */
   #main #post-not-found .article-header {
     margin-left: 50px; }
@@ -1083,7 +1121,13 @@ SIDEBARS & ASIDES
     width: 500px;
     margin-left: auto;
     position: sticky;
-    top: 0; } }
+    top: 0; }
+  /* --- CASE STUDIES --- */
+  .page-template-page-case-studies #main .featured-image {
+    height: auto; }
+  /* --- PAYMENT --- */
+  .payment {
+    padding-top: 30vh; } }
 
 /*********************
 PRINT STYLESHEET

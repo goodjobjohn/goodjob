@@ -69,9 +69,15 @@ GLOBAL STYLES
         grid: right; 
         //margin-top: 100vh;
         padding: 0 0 0 50px;
+        
         .featured-image {
             height: calc( 100vh - 52px );
-            padding-top: 17vh;
+            margin-top: 17vh;
+
+            label {            
+                position: sticky;
+                top: 0;
+            }
 
             /* Hide the toggle checkbox */
             #expand-toggle {
@@ -106,6 +112,14 @@ GLOBAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 
+/* Guten */
+.wp-block-media-text {
+    display: grid;
+}
+.wp-block-media-text>figure>img, .wp-block-media-text>figure>video {
+    width: 100%;
+    margin-left: 0;
+}
 
 /*********************
 SIDEBARS & ASIDES
@@ -118,6 +132,11 @@ SIDEBARS & ASIDES
 .inner-sidebar {
     position: sticky;
     top: 0;
+}
+
+/* --- HOME --- */
+.content-title {
+    margin-top:calc(100vh - 62px);
 }
 
 /* --- 404 --- */
@@ -140,4 +159,17 @@ SIDEBARS & ASIDES
     position: sticky;
     top: 0;
 
+}
+
+/* --- CASE STUDIES --- */
+.page-template-page-case-studies {
+    
+    #main .featured-image {
+        height: auto;
+    }
+}
+
+/* --- PAYMENT --- */
+.payment {
+    padding-top: 30vh;
 }

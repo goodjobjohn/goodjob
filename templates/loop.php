@@ -26,7 +26,7 @@
 			<?php get_template_part( 'templates/header', 'title'); ?>
 
 			<?php // Delete or comment out if you don't need this on your page or post. Edit in /templates/byline.php ?>
-			<?php get_template_part( 'templates/byline'); ?>
+			<!-- <?php get_template_part( 'templates/byline'); ?> -->
 
 		</header> <?php // end article header ?>
 
