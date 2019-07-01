@@ -9,9 +9,11 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4.5
+Version: 1.4.6
 
 *******************************************************************
+### 1.4.6 minor css fix
+
 ### 1.4.5 2019-07-01
 - added payment template
 - updated stripe payment from test to live
