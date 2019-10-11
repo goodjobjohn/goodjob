@@ -9,10 +9,14 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4.6
+Version: 1.4.7
 
 *******************************************************************
-### 1.4.6 minor css fix
+### 1.4.7 2019-10-12
+- css fix
+
+### 1.4.6 2019-07-01
+- css fix
 
 ### 1.4.5 2019-07-01
 - added payment template
