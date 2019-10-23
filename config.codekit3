@@ -828,16 +828,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/library/scss/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/library/scss/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/library/scss/style.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1076,24 +1066,14 @@
 		"oAP": "/single.php",
 		"oF": 0
 		},
-	"/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/style-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/style.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/style-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0
 		},
 	"/taxonomy-custom_cat.php": {
