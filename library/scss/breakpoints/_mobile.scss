@@ -47,6 +47,8 @@ a, a:visited {
     font-weight: 700;
     color: $text-black;
     text-decoration: none;
+    overflow-wrap: break-word;
+    
     /* on hover */
     &:hover, &:focus {
         text-decoration: none;
@@ -353,7 +355,7 @@ POSTS & CONTENT STYLES
             }
 
             .post-cat, .post-tag {
-                margin-bottom: 10px; 
+                margin-bottom: 46px; 
                 position: sticky;
                 top: 80px;
                 background-color: white;

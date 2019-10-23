@@ -55,7 +55,7 @@
 				<div class="animated-logos">
 					
 						<h3>Motion <em>inspires</em> emotion</h3>
-						<p>To celebrate my new site, I’m offering a promo rate of $250 for custom animated logos. Give me 5 seconds - and I’ll bring your brand to life. <a href="<?php echo the_permalink(); ?>logo-animation/">Click here</a> to find out more about adding the finishing flowing touch to your narrative.</p>
+						<p>I’m offering a promo rate of $250 for custom animated logos. Give me 5 seconds - and I’ll bring your brand to life. <a href="<?php echo the_permalink(); ?>logo-animation/">Click here</a> to find out more about adding the finishing flowing touch to your narrative.</p>
 					
 				</div>
 				

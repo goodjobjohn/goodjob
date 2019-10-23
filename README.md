@@ -9,9 +9,12 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4.7
+Version: 1.4.8
 
 *******************************************************************
+### 1.4.8 2019-10-23
+- css fix
+
 ### 1.4.7 2019-10-12
 - css fix
 

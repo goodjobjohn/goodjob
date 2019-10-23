@@ -628,6 +628,7 @@ a, a:visited {
   font-weight: 700;
   color: #333333;
   text-decoration: none;
+  overflow-wrap: break-word;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
@@ -849,7 +850,7 @@ POSTS & CONTENT STYLES
       position: sticky;
       top: 100px; }
     #main .post .article-header .post-cat, #main .post .article-header .post-tag {
-      margin-bottom: 10px;
+      margin-bottom: 46px;
       position: sticky;
       top: 80px;
       background-color: white; }
