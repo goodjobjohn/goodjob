@@ -886,9 +886,11 @@ POSTS & CONTENT STYLES
     #main .article-footer .background-image {
       background-size: cover;
       height: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      }
     #main .article-footer img {
-      display: none; }
+      /* display: none; */
+      }
 
 .contact {
   margin-bottom: 50vh; }

@@ -82,12 +82,7 @@
 
 				<div id="contact" class="contact">
 					<span class="anchor" id="talktome"></span>
-					<h3>Let's tell <em>your</em> story.</h3>
-					<!-- <input name="name" value="name">
-					<input name="email" value="email">
-					<textarea name="message" value="message">message</textarea>
-					<button>Send</button> -->
-					<?php echo do_shortcode('[contact-form-7 id="54" title="Contact"]'); ?>
+					<h3>Let's tell <em>your</em> story. <a href="mailto:john+goodjob@basham.com.au">Shoot me a message</a></h3>			
 				</div>
 		
 			</section> 
