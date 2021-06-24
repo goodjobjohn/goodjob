@@ -10,7 +10,7 @@ Author: John Basham
 
 Author URI: https://goodjob.com/
 
-Version: 1.4.9
+Version: 1.4.10
 
 ---
 ### 1.4.10 2021-06-23
