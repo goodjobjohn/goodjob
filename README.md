@@ -8,7 +8,7 @@ About theme: Based on Plate starter theme by studio.bio. Stripped out a lot andd
 
 Author: John Basham
 
-Author URI: https://goodjob.com/
+Author URI: https://goodjobjohn.com/
 
 Version: 1.4.10
 
