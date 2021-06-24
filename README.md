@@ -13,6 +13,11 @@ Author URI: https://goodjob.com/
 Version: 1.4.9
 
 ---
+### 1.4.10 2021-06-23
+
+- removed google tag manager
+- fix mobile hero image
+- added underline to links
 
 ### 1.4.9 2020-08-06
 

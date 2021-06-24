@@ -89,7 +89,7 @@
 
 			<footer class="article-footer preload">
 				<div class="background-image"  data-responsive-background-image>
-					<?php the_post_thumbnail('full', array( "class" => "bg-swap")); ?>
+					<div class="image-container"><?php the_post_thumbnail('full', array( "class" => "bg-swap")); ?></div>
 				</div>
 			</footer>
 

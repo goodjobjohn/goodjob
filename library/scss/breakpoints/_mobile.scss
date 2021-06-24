@@ -46,7 +46,7 @@ a, a:visited {
     transition: background 400ms ease-in-out;
     font-weight: 700;
     color: $text-black;
-    text-decoration: none;
+    text-decoration: underline;
     overflow-wrap: break-word;
     
     /* on hover */
@@ -87,7 +87,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     If you want it, then delete this. Do it your way.
     */
     a {
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
@@ -401,7 +401,7 @@ POSTS & CONTENT STYLES
             overflow: hidden;
 
         }
-        img { display: none; }
+        .image-container { display: none; }
     }   
 }
 
