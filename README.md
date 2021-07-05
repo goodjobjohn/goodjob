@@ -10,9 +10,14 @@ Author: John Basham
 
 Author URI: https://goodjobjohn.com/
 
-Version: 1.4.10
+Version: 1.4.11
 
 ---
+
+### 1.4.11 2021-07-05
+
+- css fix
+
 ### 1.4.10 2021-06-23
 
 - removed google tag manager
