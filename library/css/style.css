@@ -1,5 +1,5 @@
 /******************************************************************
-Stylesheet: Main Stylesheet - Expanded
+Stylesheet: Main Stylesheet - Reset
 ******************************************************************/
 /*********************
 IMPORTING PARTIALS
@@ -1204,24 +1204,28 @@ label input {
   #main {
     width: 1000px;
   }
-  #main .page, #main .post {
+  #main .page,
+#main .post {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "left right";
     margin: 0 100px;
   }
-  #main .page .article-header, #main .post .article-header {
+  #main .page .article-header,
+#main .post .article-header {
     grid-area: left;
     padding-right: 50px;
     height: 100%;
     justify-content: flex-start;
     padding-top: 30vh;
   }
-  #main .page .article-header .sticky, #main .post .article-header .sticky {
+  #main .page .article-header .sticky,
+#main .post .article-header .sticky {
     position: sticky;
     top: 100px;
   }
-  #main .page .article-header p, #main .post .article-header p {
+  #main .page .article-header p,
+#main .post .article-header p {
     font-size: 0.9em;
   }
   #main .entry-content {
@@ -1229,7 +1233,7 @@ label input {
     padding: 0 0 0 50px;
   }
   #main .entry-content .featured-image {
-    height: calc( 100vh - 52px );
+    height: calc(100vh - 52px);
     margin-top: 17vh;
     /* Hide the toggle checkbox */
   }
@@ -1259,6 +1263,9 @@ label input {
     height: 300px;
     margin-left: -100px;
   }
+  #main .article-footer .image-container {
+    display: block;
+  }
 
   /*********************
   LAYOUT & GRID STYLES
@@ -1268,7 +1275,8 @@ label input {
     display: grid;
   }
 
-  .wp-block-media-text > figure > img, .wp-block-media-text > figure > video {
+  .wp-block-media-text > figure > img,
+.wp-block-media-text > figure > video {
     width: 100%;
     margin-left: 0;
   }
@@ -1297,7 +1305,7 @@ label input {
 
   /* --- PAGE: LOGO ANIMATION ---*/
   .featured-video {
-    height: calc( 100vh - 60px );
+    height: calc(100vh - 60px);
   }
 
   .featured-video > video {
