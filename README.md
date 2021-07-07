@@ -10,11 +10,15 @@ Author: John Basham
 
 Author URI: https://goodjobjohn.com/
 
-Version: 1.4.12
+Version: 1.4.13
 
 ---
 
-### 1.4.12 2021-07-07
+### 1.4.13 2021-07-07
+
+- css fix
+
+### 1.4.12 2021-07-06
 
 - css fix
 

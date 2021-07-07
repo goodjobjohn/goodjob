@@ -652,7 +652,7 @@ GLOBAL STYLES
 *********************/
 html {
   font-size: 0.875em;
-  background-color: #EDEDED;
+  background-color: #ededed;
   scroll-behavior: smooth;
 }
 
@@ -681,7 +681,8 @@ img {
 /*********************
 LINK STYLES
 *********************/
-a, a:visited {
+a,
+a:visited {
   transition: background 400ms ease-in-out;
   font-weight: 700;
   color: #333333;
@@ -691,17 +692,20 @@ a, a:visited {
   /* on click */
   /* mobile tap color */
 }
-a:hover, a:focus, a:visited:hover, a:visited:focus {
+a:hover, a:focus,
+a:visited:hover,
+a:visited:focus {
   text-decoration: none;
   background: #FD8787;
   transition: none;
 }
-a:link, a:visited:link {
+a:link,
+a:visited:link {
   /*
-  this highlights links on iPhones/iPads.
-  so it basically works like the :hover selector
-  for mobile devices.
-  */
+      this highlights links on iPhones/iPads.
+      so it basically works like the :hover selector
+      for mobile devices.
+      */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -709,45 +713,73 @@ a:link, a:visited:link {
 HEADING STYLES
 ******************************************************************/
 /* Heading defaults */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   margin: 1.333em 0 0.5em;
   color: #303030;
   font-weight: 700;
   line-height: 1.2;
   text-rendering: optimizelegibility;
   /* 
-  Removing text decoration from all headline links.
-  If you want it, then delete this. Do it your way.
-  */
+    Removing text decoration from all headline links.
+    If you want it, then delete this. Do it your way.
+    */
 }
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a,
+h6 a,
+.h6 a {
   text-decoration: underline;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   margin-top: 0;
   margin-bottom: 0.319em;
   font-size: 2.31em;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   margin-top: 1.88em;
   font-size: 2em;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.777em;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.333em;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1em;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   text-transform: uppercase;
   letter-spacing: 4.333px;
 }
@@ -755,7 +787,8 @@ h6, .h6 {
 /*********************
 LIST STYLES
 *********************/
-ul, ol {
+ul,
+ol {
   -webkit-padding-start: 20px;
 }
 
@@ -915,34 +948,42 @@ POSTS & CONTENT STYLES
   opacity: 0;
   transition-duration: 1s;
 }
-#main .page, #main .post {
+#main .page,
+#main .post {
   margin: 0 50px;
   transition: all 1s;
 }
-#main .page .article-header, #main .post .article-header {
+#main .page .article-header,
+#main .post .article-header {
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-items: center;
   justify-content: center;
 }
-#main .page .article-header .single-title, #main .post .article-header .single-title {
+#main .page .article-header .single-title,
+#main .post .article-header .single-title {
   position: sticky;
   top: 100px;
 }
-#main .page .article-header a, #main .post .article-header a {
+#main .page .article-header a,
+#main .post .article-header a {
   display: inline-block;
 }
-#main .page .article-header a img, #main .post .article-header a img {
+#main .page .article-header a img,
+#main .post .article-header a img {
   width: 14px;
 }
-#main .page .article-header .social, #main .post .article-header .social {
+#main .page .article-header .social,
+#main .post .article-header .social {
   margin: 10px 0;
 }
-#main .page .article-header .social a, #main .post .article-header .social a {
+#main .page .article-header .social a,
+#main .post .article-header .social a {
   margin-right: 20px;
 }
-#main .page .article-header .social a:hover, #main .post .article-header .social a:hover {
+#main .page .article-header .social a:hover,
+#main .post .article-header .social a:hover {
   transform: scale(1.2);
   background: none;
 }
@@ -956,13 +997,15 @@ POSTS & CONTENT STYLES
   position: sticky;
   top: 100px;
 }
-#main .post .article-header .post-cat, #main .post .article-header .post-tag {
+#main .post .article-header .post-cat,
+#main .post .article-header .post-tag {
   margin-bottom: 46px;
   position: sticky;
   top: 80px;
   background-color: white;
 }
-#main .post .article-header .post-cat span, #main .post .article-header .post-tag span {
+#main .post .article-header .post-cat span,
+#main .post .article-header .post-tag span {
   padding: 1px 3px;
   color: white;
   font-size: 0.7em;
@@ -1005,7 +1048,7 @@ POSTS & CONTENT STYLES
   overflow: hidden;
 }
 #main .article-footer .image-container {
-  display: none;
+  visibility: hidden;
 }
 
 .contact {
@@ -1020,13 +1063,19 @@ POSTS & CONTENT STYLES
 .contact textarea {
   font-size: 1.5em;
 }
-.contact input, .contact button, .contact textarea {
+.contact input,
+.contact button,
+.contact textarea {
   background-color: rgba(253, 135, 135, 0.1);
   border: none;
   padding: 10px;
   width: 100%;
 }
-.contact input:focus, .contact input:hover, .contact button:focus, .contact button:hover, .contact textarea:focus, .contact textarea:hover {
+.contact input:focus, .contact input:hover,
+.contact button:focus,
+.contact button:hover,
+.contact textarea:focus,
+.contact textarea:hover {
   outline: 1px solid #FD8787;
 }
 .contact [type=submit] {
@@ -1090,7 +1139,8 @@ FOOTER STYLES
 }
 
 /* --- HOME --- */
-a h3:hover, a p:hover {
+a h3:hover,
+a p:hover {
   color: white;
 }
 
@@ -1110,7 +1160,7 @@ a h3:hover, a p:hover {
 
 /* --- GUTENBURGER --- */
 .wp-block-separator {
-  border-bottom: 1px solid #EDEDED;
+  border-bottom: 1px solid #ededed;
   margin-left: 0;
 }
 
@@ -1132,7 +1182,8 @@ a h3:hover, a p:hover {
   display: block;
 }
 
-.wp-block-media-text > figure > img, .wp-block-media-text > figure > video {
+.wp-block-media-text > figure > img,
+.wp-block-media-text > figure > video {
   width: 340px;
   margin-left: -50px;
 }
@@ -1149,7 +1200,7 @@ a h3:hover, a p:hover {
 
 /* --- 404 --- */
 #main #post-not-found {
-  height: calc( 100vh - 50px);
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1262,9 +1313,6 @@ label input {
     max-width: 1000px;
     height: 300px;
     margin-left: -100px;
-  }
-  #main .article-footer .image-container {
-    display: block;
   }
 
   /*********************
