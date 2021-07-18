@@ -169,3 +169,50 @@ SIDEBARS & ASIDES
 .payment {
   padding-top: 30vh;
 }
+
+/* --- PAGE: RATE CARD --- */
+.page-template-page-rate-card {
+  #main .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'full';
+    margin: 0 100px;
+
+    .article-header {
+      grid-area: full;
+      height: 100%; // removed messing with mobile vh setting
+      justify-content: flex-start;
+      padding: 100px 50px 0;
+
+      .sticky {
+        position: sticky;
+        top: 100px;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+    }
+
+    .wp-block-column h3 {
+      position: sticky;
+      top: 30px;
+    }
+  }
+
+  // The contact page is using the rate card template.
+  // It's probably better to rename the template to a
+  // more generic 'full width' description.
+  &.contact {
+    height: 100vh;
+    #content {
+      height: auto;
+      .article-header {
+        padding-top: 38vh;
+      }
+    }
+    .footer {
+      display: none;
+    }
+  }
+}

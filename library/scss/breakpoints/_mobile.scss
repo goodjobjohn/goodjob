@@ -438,37 +438,37 @@ POSTS & CONTENT STYLES
   }
 }
 
-.contact {
-  margin-bottom: 50vh;
+// .contact {
+//   margin-bottom: 50vh;
 
-  label {
-    font-size: 0.7em;
-  }
-  input {
-    font-size: 2em;
-  }
-  textarea {
-    font-size: 1.5em;
-  }
-  input,
-  button,
-  textarea {
-    background-color: rgba($john-red, 0.1);
-    border: none;
-    padding: 10px;
-    width: 100%;
-    &:focus,
-    &:hover {
-      outline: 1px solid $john-red;
-    }
-  }
+//   label {
+//     font-size: 0.7em;
+//   }
+//   input {
+//     font-size: 2em;
+//   }
+//   textarea {
+//     font-size: 1.5em;
+//   }
+//   input,
+//   button,
+//   textarea {
+//     background-color: rgba($john-red, 0.1);
+//     border: none;
+//     padding: 10px;
+//     width: 100%;
+//     &:focus,
+//     &:hover {
+//       outline: 1px solid $john-red;
+//     }
+//   }
 
-  [type='submit'] {
-    border-radius: 10px;
-    width: 100px;
-    font-size: 1em;
-  }
-}
+//   [type='submit'] {
+//     border-radius: 10px;
+//     width: 100px;
+//     font-size: 1em;
+//   }
+// }
 
 /******************************************************************
 SCREEN READER STYLES
@@ -561,7 +561,7 @@ a p {
 
 /* --- GUTENBURGER --- */
 .wp-block-separator {
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid #fd8787;
   margin-left: 0;
 }
 .wp-block-quote {
@@ -611,7 +611,7 @@ a p {
   }
 }
 
-/* --- PAGE: LOGO ANIMATION ---*/
+/* --- PAGE: LOGO ANIMATION --- */
 .featured-video > video {
   width: 340px;
   margin-left: -50px;
@@ -626,4 +626,12 @@ a p {
 }
 label input {
   width: 100%;
+}
+
+/* --- PAGE: RATE CARD --- */
+.page-template-page-rate-card {
+  .page-title {
+    position: sticky;
+    top: 30px;
+  }
 }
