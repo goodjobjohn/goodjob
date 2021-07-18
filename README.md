@@ -10,9 +10,19 @@ Author: John Basham
 
 Author URI: https://goodjobjohn.com/
 
-Version: 1.4.13
+Version: 1.4.15
 
 ---
+
+### 1.4.15 2021-07-18
+
+- rate card template
+- css changes
+- removed junk
+
+### 1.4.14 ??
+
+- note sure
 
 ### 1.4.13 2021-07-07
 
