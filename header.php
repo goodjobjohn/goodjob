@@ -40,7 +40,7 @@
         <?php endif; ?>
 
         <?php // put font scripts like Typekit/Adobe Fonts here ?>
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i" rel="stylesheet"> -->
         <?php // end fonts ?>
 
         <?php // wordpress head functions ?>

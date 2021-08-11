@@ -116,13 +116,13 @@ function plate_register_sidebars() {
 Use this to add Google or other web fonts.
 */
 
-add_action( 'wp_enqueue_scripts', 'plate_fonts' );
+// add_action( 'wp_enqueue_scripts', 'plate_fonts' );
 
-function plate_fonts() {
+// function plate_fonts() {
 
-    wp_enqueue_style( 'plate-fonts', 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i' );
+//     wp_enqueue_style( 'plate-fonts', 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i' );
 
-}
+// }
 
 
 /****************************************
