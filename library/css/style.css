@@ -695,6 +695,7 @@ body {
   position: relative;
   z-index: -3;
   width: 340px;
+  min-width: 340px;
 }
 
 img {
@@ -1224,6 +1225,11 @@ label input {
   top: 30px;
 }
 
+/* --- PAGE: WORK PAGE --- */
+.page-template-page-work #main .page {
+  margin: 0;
+}
+
 @media only screen and (min-width: 999px) {
   /******************************************************************
   Stylesheet: Desktop Stylesheet
@@ -1405,6 +1411,34 @@ label input {
   }
   .page-template-page-rate-card.contact .footer {
     display: none;
+  }
+
+  /* --- PAGE: WORK PAGE --- */
+  .page-template-page-work #main .page {
+    margin: 0;
+    display: block;
+  }
+  .page-template-page-work #main .page .entry-content {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .page-template-page-work #main .page .entry-content input {
+    display: none;
+  }
+  .page-template-page-work #main .page .entry-content input:checked ~ label img {
+    transition-duration: 0.5s;
+    cursor: zoom-out;
+    display: inline-block;
+  }
+  .page-template-page-work #main .page .entry-content input:checked ~ label img.left {
+    transform: scale(3.02) translateX(111px);
+  }
+  .page-template-page-work #main .page .entry-content input:checked ~ label img.middle {
+    transform: scale(3.02) translateX(-75px);
+  }
+  .page-template-page-work #main .page .entry-content input:checked ~ label img.right {
+    transform: scale(3.02) translateX(-75px);
   }
 }
 /*********************

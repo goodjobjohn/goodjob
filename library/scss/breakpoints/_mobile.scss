@@ -28,6 +28,7 @@ body {
   position: relative;
   z-index: -3;
   width: 340px;
+  min-width: 340px;
 }
 
 img {
@@ -633,5 +634,12 @@ label input {
   .page-title {
     position: sticky;
     top: 30px;
+  }
+}
+
+/* --- PAGE: WORK PAGE --- */
+.page-template-page-work {
+  #main .page {
+    margin: 0;
   }
 }

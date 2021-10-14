@@ -216,3 +216,35 @@ SIDEBARS & ASIDES
     }
   }
 }
+
+/* --- PAGE: WORK PAGE --- */
+.page-template-page-work {
+  #main .page {
+    // section element
+    margin: 0;
+    display: block;
+
+    .entry-content {
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      input {
+        display: none;
+      }
+      input:checked ~ label img {
+        transition-duration: 0.5s;
+        cursor: zoom-out;
+        display: inline-block;
+      }
+      input:checked ~ label img.left {
+        transform: scale(3.02) translateX(111px);
+      }
+      input:checked ~ label img.middle {
+        transform: scale(3.02) translateX(-75px);
+      }
+      input:checked ~ label img.right {
+        transform: scale(3.02) translateX(-75px);
+      }
+    }
+  }
+}

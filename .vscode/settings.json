@@ -1,0 +1,8 @@
+{
+  "editor.selectionHighlight": false,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.foldingHighlight": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.matchBrackets": "near",
+  "editor.occurrencesHighlight": false
+}
