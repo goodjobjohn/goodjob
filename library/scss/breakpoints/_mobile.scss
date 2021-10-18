@@ -184,12 +184,13 @@ HEADER STYLES
 
 #site-title {
   margin: 18px 20px 0 0;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 700;
   line-height: inherit;
   a {
     color: lighten($sb-black, 12%);
     border-bottom: none;
+    text-decoration: none;
   }
 }
 
@@ -640,6 +641,30 @@ label input {
 /* --- PAGE: WORK PAGE --- */
 .page-template-page-work {
   #main .page {
-    margin: 0;
+    // section element
+    display: block;
+    .article-header {
+      padding-top: 100px;
+      border-bottom: 2px solid $john-red;
+      height: auto;
+    }
+
+    .branding {
+      margin-top: 20px;
+      margin-left: -45px;
+      padding: 0;
+      width: 330px;
+
+      label {
+        height: 197px;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+  .wp-block-media-text > figure > img {
+    margin-top: 40px;
   }
 }

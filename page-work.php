@@ -59,10 +59,15 @@
 
                             <?php the_content(); ?>
 
+                        </section>
+
+                        <section class="branding" itemprop="articleBody">
+
                             <?php // REPEATER FIELD
                             $rows = get_field('work');
                             if( $rows ) {
-                                
+                                $image_id = '';
+                                $position = '';
                                 foreach( $rows as $row ) {
 
                                     if (wp_is_mobile()){ // MOBILE
@@ -70,24 +75,27 @@
                                         echo '<image width="330" height="197" src="' . $row['small'] . '"/>'; 
                                     
                                     } else { // DESKTOP
-
-                                        $id = wp_unique_id();
-                                        if ( $id == 1 ){ // left image
-                                            $class = 'transform: scale(3.1) translateX(108px);';
-                                        } elseif ( $id == 2 ){ // middle image
-                                            $class = 'transform: scale(3.1) translateX(0px);';                                
-                                        } else { // right image
-                                            $class = 'transform: scale(3.1) translateX(-107px);';
+                                                                                
+                                        $image_id++;
+                                        $position++;
+                                        
+                                        if ( $position == 1 ){ // left image
+                                            $transform = 'transform: scale(3.1) translateX(108px);';
+                                        } elseif ( $position == 2 ){ // middle image
+                                            $transform = 'transform: scale(3.1) translateX(0px);';                                
+                                        } else { // 3 = right image
+                                            $transform = 'transform: scale(3.1) translateX(-107px);';
                                         }
                                         ?>
-                                        <style>#expand-toggle-<?php echo $id ?>:checked + label img { <?php echo $class; ?> }</style>
-                                        <input type="checkbox" id="expand-toggle-<? echo $id; ?>">
-                                        <label for="expand-toggle-<? echo $id; ?>">
+                                        <style>#expand-toggle-<?php echo $image_id ?>:checked + label img { <?php echo $transform; ?> }</style>
+                                        <input type="checkbox" id="expand-toggle-<? echo $image_id; ?>">
+                                        <label for="expand-toggle-<? echo $image_id; ?>">
                                             <image width="330" height="197" srcset="<?php echo $row['small']; ?> 1000w, <?php echo $row['large']; ?> 1001w" />                                    
                                         </label>
+                                        
                                         <?php
-                                        if ( $class >= 3 ) { $class = 0; }
-
+                                        if ($position == 3) {$position = 0;}
+                                        
                                     }
                                 }
                             } 
