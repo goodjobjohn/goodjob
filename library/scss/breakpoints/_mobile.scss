@@ -636,6 +636,24 @@ label input {
     position: sticky;
     top: 30px;
   }
+
+  // OVERRIDES block editor
+  @media (min-width: 600px) and (max-width: 999px) {
+    .wp-block-columns {
+      flex-wrap: wrap;
+    }
+    .wp-block-column:not(:only-child) {
+      flex-basis: 100% !important;
+      flex-grow: 1;
+      min-width: 0;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      flex-wrap: wrap;
+    }
+    .wp-block-column:nth-child(2n) {
+      margin-left: 0;
+    }
+  }
 }
 
 /* --- PAGE: WORK PAGE --- */
