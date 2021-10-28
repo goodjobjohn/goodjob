@@ -1510,7 +1510,7 @@ label input {
     top: 30px;
   }
   .page-template-page-cv #main .entry-content {
-    grid-area: full;
+    padding: 0;
   }
   .page-template-page-cv.contact {
     height: 100vh;
