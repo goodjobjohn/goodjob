@@ -1483,6 +1483,48 @@ label input {
     display: none;
   }
 
+  /* --- PAGE: CV PAGE - straight duplicate of rate card --- */
+  .page-template-page-cv #main .page {
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-areas: "full";
+    margin: 0 100px;
+  }
+  .page-template-page-cv #main .page .article-header {
+    grid-area: full;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 100px 0;
+  }
+  .page-template-page-cv #main .page .article-header .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+  }
+  .page-template-page-cv #main .page .article-header p {
+    font-size: 0.9em;
+  }
+  .page-template-page-cv #main .page .wp-block-column h3 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+  }
+  .page-template-page-cv #main .entry-content {
+    grid-area: full;
+  }
+  .page-template-page-cv.contact {
+    height: 100vh;
+  }
+  .page-template-page-cv.contact #content {
+    height: auto;
+  }
+  .page-template-page-cv.contact #content .article-header {
+    padding-top: 38vh;
+  }
+  .page-template-page-cv.contact .footer {
+    display: none;
+  }
+
   /* --- PAGE: WORK PAGE --- */
   .page-template-page-work #main .page {
     margin: 0 100px;

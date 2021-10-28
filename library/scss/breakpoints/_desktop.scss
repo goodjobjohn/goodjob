@@ -245,7 +245,7 @@ SIDEBARS & ASIDES
 /* --- PAGE: CV PAGE - straight duplicate of rate card --- */
 .page-template-page-cv {
   #main .page {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr;
     grid-template-areas: 'full';
     margin: 0 100px;
@@ -254,7 +254,7 @@ SIDEBARS & ASIDES
       grid-area: full;
       height: 100%; // removed messing with mobile vh setting
       justify-content: flex-start;
-      padding: 100px 50px 0;
+      padding: 100px 0;
 
       .sticky {
         position: sticky;
@@ -266,14 +266,13 @@ SIDEBARS & ASIDES
       }
     }
 
-    .entry-content {
-      grid-area: full;
-    }
-
     .wp-block-column h3 {
       position: sticky;
       top: 30px;
     }
+  }
+  #main .entry-content {
+    grid-area: full;
   }
 
   // The contact page is using the rate card template.
